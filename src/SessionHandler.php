@@ -86,7 +86,7 @@ final class SessionHandler implements \SessionHandlerInterface
     
     public function destroy($id)
     {
-        $sql = "DELETE FROM `" . $this->dbTable . " WHERE `id` = '" . $id . "'";
+        $sql = "DELETE FROM `" . $this->dbTable . "` WHERE `id` = '" . $id . "'";
         return $this->dbConnection->query($sql);
     }
     
