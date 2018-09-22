@@ -94,7 +94,7 @@ final class SessionHandler implements \SessionHandlerInterface
     public function gc($maxlifetime)
     {
         $sql = sprintf(
-            "DELETE FROM %s WHERE `timestamp` < '%s'", 
+            "DELETE FROM %s WHERE `modified_timestamp` < '%s'", 
             $this->dbTable, 
             time() - intval($maxlifetime)
         );
